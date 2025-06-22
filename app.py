@@ -1,6 +1,8 @@
 import streamlit as st
 import nltk
 from pdfminer.high_level import extract_text
+from score_resume import score_resume
+
 
 
 @st.cache_resource
