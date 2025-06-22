@@ -1,8 +1,14 @@
 import streamlit as st
+import nltk
 from pdfminer.high_level import extract_text
 from score_resume import score_resume
 
+# Ensure NLTK models download on cloud
+nltk.download('punkt')
+nltk.download('stopwords')
+
 st.set_page_config(page_title="Resume Evaluator", layout="centered")
+
 
 st.title("📄 AI-Powered Resume Evaluator")
 st.markdown("Upload your resume (PDF) and get a tailored score based on the selected job role.")
