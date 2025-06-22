@@ -1,5 +1,7 @@
 import streamlit as st
 import nltk
+from pdfminer.high_level import extract_text
+
 
 @st.cache_resource
 def download_nltk():
