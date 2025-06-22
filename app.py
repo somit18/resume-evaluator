@@ -1,11 +1,12 @@
 import streamlit as st
 import nltk
-from pdfminer.high_level import extract_text
-from score_resume import score_resume
 
-# Ensure NLTK models download on cloud
-nltk.download('punkt')
-nltk.download('stopwords')
+@st.cache_resource
+def download_nltk():
+    nltk.download('punkt')
+    nltk.download('stopwords')
+
+download_nltk()
 
 st.set_page_config(page_title="Resume Evaluator", layout="centered")
 
