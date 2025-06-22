@@ -12,11 +12,14 @@ def download_nltk():
 
 download_nltk()
 
-st.set_page_config(page_title="Resume Evaluator", layout="centered")
-
+st.set_page_config(
+    page_title="Resume Evaluator by Somit 💼",
+    page_icon="📄",
+    layout="centered"
+)
 
 st.title("📄 AI-Powered Resume Evaluator")
-st.markdown("Upload your resume (PDF) and get a tailored score based on the selected job role.")
+st.caption("Made with ❤️ by Somit Parwe — [GitHub](https://github.com/somit18)")
 
 role = st.selectbox("🔍 Select Job Role", ["Data Analyst", "Web Developer", "Machine Learning Engineer"])
 uploaded_file = st.file_uploader("📤 Upload Resume (PDF)", type="pdf")
@@ -63,3 +66,9 @@ Tips:
         file_name="resume_report.txt",
         mime="text/plain"
     )
+
+st.markdown("""
+---
+#### 👨‍💻 Developed by [Somit Parwe](https://github.com/somit18)
+""")
+
