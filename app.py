@@ -3,7 +3,11 @@ import nltk
 from pdfminer.high_level import extract_text
 from score_resume import score_resume
 
-
+st.set_page_config(
+    page_title="Resume Evaluator by Somit 💼",
+    page_icon="📄",
+    layout="centered"
+)
 
 @st.cache_resource
 def download_nltk():
@@ -12,11 +16,6 @@ def download_nltk():
 
 download_nltk()
 
-st.set_page_config(
-    page_title="Resume Evaluator by Somit 💼",
-    page_icon="📄",
-    layout="centered"
-)
 
 st.title("📄 AI-Powered Resume Evaluator")
 st.caption("Made with ❤️ by Somit Parwe — [GitHub](https://github.com/somit18)")
