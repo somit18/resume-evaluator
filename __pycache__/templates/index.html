@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Evaluator</title>
+</head>
+<body>
+    <h1>📄 AI-Powered Resume Evaluator</h1>
+
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="role">Select Job Profile</label>
+        <select name="role" required>
+            <option value="">-- Select --</option>
+            <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+            <option value="Data Scientist">Data Scientist</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <!-- Add more roles -->
+        </select><br><br>
+
+        <input type="file" name="resume" accept=".pdf" required><br><br>
+        <button type="submit">Evaluate</button>
+    </form>
+</body>
+</html>

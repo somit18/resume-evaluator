@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Score</title>
+</head>
+<body>
+    <h1>🧾 Resume Evaluation Result</h1>
+    <p><strong>Role:</strong> {{ role }}</p>
+    <p><strong>Score:</strong> {{ score }}/100</p>
+
+    <h3>✅ Matched Keywords:</h3>
+    <ul>
+        {% for word in matched_keywords %}
+            <li>{{ word }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>❌ Missing Keywords:</h3>
+    <ul>
+        {% for word in missing_keywords %}
+            <li>{{ word }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('index') }}">🔙 Try another resume</a>
+</body>
+</html>
