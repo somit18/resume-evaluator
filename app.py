@@ -2,6 +2,14 @@ import streamlit as st
 import nltk
 from pdfminer.high_level import extract_text
 from score_resume import score_resume
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "✅ Flask App is Running on Render!"
 
 st.set_page_config(
     page_title="Resume Evaluator by Somit 💼",
