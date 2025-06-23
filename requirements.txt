@@ -1,4 +1,3 @@
-streamlit
+Flask
 pdfminer.six
-nltk
-scikit-learn
+gunicorn
